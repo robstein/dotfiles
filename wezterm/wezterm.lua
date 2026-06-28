@@ -162,6 +162,11 @@ local maximize_window = wezterm.action_callback(function(window, _pane)
   window:maximize()
 end)
 
+config.keys = {
+  { key = "LeftArrow",  mods = "OPT", action = wezterm.action.SendString("\x1bb") },
+  { key = "RightArrow", mods = "OPT", action = wezterm.action.SendString("\x1bf") },
+}
+
 config.mouse_bindings = {
   -- Complete selection and copy to system clipboard when releasing left click
   {
