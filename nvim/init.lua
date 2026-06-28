@@ -16,6 +16,8 @@ vim.g.maplocalleader = "\\"
 
 local opt = vim.opt
 
+vim.cmd("syntax enable")
+vim.cmd("filetype plugin indent on")
 opt.number = true
 opt.relativenumber = true
 opt.mouse = "a"
@@ -126,40 +128,6 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
     opts = {},
-  },
-
-  -- Treesitter.
-  -- Pinned to master because this config uses the classic
-  -- require("nvim-treesitter.configs").setup(...) API.
-  {
-    "nvim-treesitter/nvim-treesitter",
-    branch = "master",
-    build = ":TSUpdate",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = {
-          "bash",
-          "go",
-          "javascript",
-          "json",
-          "lua",
-          "markdown",
-          "python",
-          "query",
-          "tsx",
-          "typescript",
-          "vim",
-          "vimdoc",
-          "yaml",
-        },
-        highlight = {
-          enable = true,
-        },
-        indent = {
-          enable = true,
-        },
-      })
-    end,
   },
 
   -- Fuzzy finder
