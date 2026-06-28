@@ -1,0 +1,29 @@
+// ~/.config/zellij/config.kdl
+// Minimal config — no pane borders, clean status bar
+
+theme "catppuccin-mocha" // swap for any built-in theme you like
+
+// Hide pane frames (the borders around each pane)
+pane_frames false
+
+// Keep the UI tight
+simplified_ui true
+
+// Status bar at the bottom — set to "compact" for one line,
+// or "disable" to remove it entirely
+default_layout "compact"
+
+ui {
+    pane_frames {
+        hide_session_name false
+        rounded_corners false
+    }
+}
+
+// Key bindings — tweak as you like
+keybinds clear-defaults=false {
+    normal {
+        // Quick toggle borders back on/off if you ever need them
+        bind "Alt b" { TogglePaneFrames; }
+    }
+}
