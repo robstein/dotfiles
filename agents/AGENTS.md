@@ -12,13 +12,7 @@ These are common instructions for Rob's agents across all scenarios.
   Instead, prefer quality, simplicity, robustness, scalability, and long term maintainability.
 * When doing bug fixes, always start with reproducing the bug in an E2E setting as closely aligned with how an end user would experience it as possible. \
   This makes sure you find the real problem so your fix will actually solve it.
-* When end-to-end testing a product, be picky about the UI you see and be obsessed with pixel perfection. \
-  If something clearly looks off, even if it is not directly related to what you are doing, try to get it fixed along
+* When you can observe the UI (e.g., via screenshot tools), be picky about the UI you see and be obsessed with pixel perfection. \
+  If something clearly looks off, even if it is not directly related to what you are doing, try to get it fixed or file a task for it, but don't let it block the primary task.
 * Apply that same high standard to engineering excellence: lint, test failures, and test flakiness. \
   If you see one, even if it is not caused by what you are working on right now, still get it fixed.
-
-## Rob's Opinions
-When you are working on something that would benefit from being informed by Rob's viewpoints, read ~/OPINIONS.md to understand.
-
-## Voice Profile
-When you are talking/posting on behalf of Rob using his identity, read ~/VOICE.md to see how Rob talks.
