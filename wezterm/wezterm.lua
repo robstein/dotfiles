@@ -174,6 +174,12 @@ config.mouse_bindings = {
     mods = 'NONE',
     action = wezterm.action.CompleteSelection 'Clipboard',
   },
+  -- Restore default hyperlink clicking (lost when mouse_bindings is defined)
+  {
+    event = { Up = { streak = 1, button = 'Left' } },
+    mods = 'SUPER',
+    action = wezterm.action.OpenLinkAtMouseCursor,
+  },
 }
 config.colors = {
   selection_fg = 'none', -- Use 'none' to keep the original text color, or a color like '#ffffff'
